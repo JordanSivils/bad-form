@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Portal from "../portal/Portal"
 import IlmDonation from "../portal/donation/ilmDonation"
+import ilm from "../../assets/ILM_sec.avif"
 
 type SuccessTypes = {
     name: string
@@ -17,7 +18,7 @@ const Success = ({ name, email }: SuccessTypes) => {
             <p className="text-2xl font-bold">WOW! What a donation, {name}</p>
             <p>We will get this proccessed immediately and email {email} your receipt.</p>
             <div className="flex justify-between items-center bg-white gap-2 p-2">
-                <img src="/ILM_sec.avif" alt="ILM Security" height={40} width={100}/>
+                <img src={ilm} alt="ILM Security" height={40} width={100}/>
                 <div className="flex flex-col items-start ">
                     <p>Based on your intrests...</p>
                     <p>Would you be interested in donating to the ILM Security group?</p>

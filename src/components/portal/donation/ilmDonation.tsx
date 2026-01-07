@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Review from "../review/Review"
 import Portal from "../Portal"
+import ilm from "../../../assets/ILM_sec.avif"
 
 type DonationPageTypes = {
     name: string
@@ -24,7 +25,7 @@ const IlmDonation = ({ name, email }: DonationPageTypes) => {
         <button className="bg-transparent border-0 p-1 cursor-pointer" onClick={handleIncrease}>x</button>
         <div className="flex flex-col w-100 p-2 justify-center items-center">
                 <p className="text-2xl font-bold">WOW, you are on a roll!! We cant thank you enough!</p>
-                <img className="text-center" src="/ILM_sec.avif" alt="ILM Security Image" height={40} width={100}/>
+                <img className="text-center" src={ilm} alt="ILM Security Image" height={40} width={100}/>
                 <h5>ILM Security Donate</h5>
                 <p>Thank you {name}, We appreciate your support!</p>
                 <p>A receipt will be sent to {email}</p>

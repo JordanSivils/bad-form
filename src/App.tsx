@@ -3,6 +3,7 @@ import Header from "./components/layout/header"
 import Info from "./components/portal/Info/Info";
 import Portal from "./components/portal/Portal";
 import ErrorPortal from "./components/error/error";
+import wilm from "./assets/wilmIo.png"
 
 const App = () => {
   const [infoOpen, setInfoOpen] = useState(false);
@@ -18,7 +19,7 @@ const App = () => {
       </h2>
       <div className="flex bg-gray-100 p-2 gap-2 rounded-md items-center justify-between">
         <div>
-          <img className="rounded-full" src="/wilmIo.png" alt="Wilmington IO Group" height={50} width={50}/>
+          <img className="rounded-full" src={wilm} alt="Wilmington IO Group" height={50} width={50}/>
         </div>
         <div className="d-flex-col">
           <p className="font-bold">Wlmington Input Output</p>

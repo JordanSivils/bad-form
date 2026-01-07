@@ -2,6 +2,7 @@ import { useState } from "react"
 import Review from "../review/Review"
 import Portal from "../Portal"
 import Success from "../../success/Success"
+import wilm from "../../../assets/wilmIo.png"
 
 type DonationPageTypes = {
     donationAmt: number
@@ -32,7 +33,7 @@ const DonationPage = ({donationAmt, name, email}: DonationPageTypes) => {
         <>
         <button className="bg-transparent border-0 p-1 cursor-pointer" onClick={handleIncrease}>x</button>
         <div className="flex flex-col w-100 p-2 justify-center items-center">
-                <img className="rounded-full text-center" src="/wilmIo.png" alt="Wilmington IO Image" height={60} width={60}/>
+                <img className="rounded-full text-center" src={wilm} alt="Wilmington IO Image" height={60} width={60}/>
                 <h5>Wilmington IO Donate</h5>
                 <p>Thank you {name}, We appreciate your support!</p>
                 <p>A receipt will be sent to {email}</p>
