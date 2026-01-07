@@ -1,0 +1,26 @@
+.portalContainer {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.121);
+    display: grid;
+    place-items: center;
+    z-index: 1000;
+}
+
+.childContainer {
+    background-color: #efefef;
+    padding: 2px;
+    border-radius: 8px;
+    min-width: 300px;
+    text-align: start;
+    border: 1px solid rgb(203, 203, 203)
+}
+
+.portalClose {
+    padding: 6px;
+    cursor: pointer;
+    border: none;
+    color: var(--prim-font-color);
+    background: none;
+    border-radius: 50%;
+}
