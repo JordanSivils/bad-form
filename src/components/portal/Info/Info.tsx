@@ -6,13 +6,14 @@ const Info = () => {
     const [email, setEmail] = useState<string >("")
     const [name, setName] = useState<string>("");
     const [donationOpen, setDonationOpen] = useState(false)
-    const onSubmit = () => {
-        setDonationOpen(true);
+    const onSubmit = (e: React.FormEvent) => {
+        e.preventDefault() // prevent page reload
+        setDonationOpen(true)
     }
     return (
             <div>
                 {donationOpen && <Portal isOpen={donationOpen} children={<DonationPage name={name} email={email} donationAmt={10}/>} />}
-                <form className="p-3 flex flex-col gap-2">
+                <form className="p-3 flex flex-col gap-2" onSubmit={onSubmit}>
                     <div className="flex flex-col">
                     <label className="px-2">Full Name</label>
                     <input
@@ -38,12 +39,11 @@ const Info = () => {
                 </div>
 
                 <button
-                    type="button"
-                    disabled={!email || !name}
-                    className={`  ${!email || !name ? `` : "bg-green-500"}`}
-                    onClick={onSubmit}
+                type="submit"
+                className="bg-green-500 disabled:opacity-50"
+                disabled={!name || !email}
                 >
-                    Submit
+                Submit
                 </button>
             </form>
         </div>
